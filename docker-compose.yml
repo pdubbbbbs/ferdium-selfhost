@@ -21,7 +21,7 @@ services:
       - IS_DASHBOARD_ENABLED=true
       - IS_REGISTRATION_ENABLED=true
       - CONNECT_WITH_FRANZ=false
-      - APP_KEY=CHANGE_THIS_TO_RANDOM_STRING
+      - APP_KEY=tmJGmEBIEV1h6R8LqOT8+VGSAQLEuS+gFrdSsua0+Eg=
       - HOST=0.0.0.0
       - PORT=3333
       - CACHE_VIEWS=false
