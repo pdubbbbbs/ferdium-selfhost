@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  ferdium-server:
+    image: getferdi/ferdi-server:latest
+    container_name: ferdium-server
+    restart: unless-stopped
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./database:/app/database
+    environment:
+      - NODE_ENV=production
+      - APP_URL=http://localhost:3333
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=ferdium
+      - DATA_DIR=data
+      - IS_CREATION_ENABLED=true
+      - IS_DASHBOARD_ENABLED=true
+      - IS_REGISTRATION_ENABLED=true
+      - CONNECT_WITH_FRANZ=false
+      - APP_KEY=CHANGE_THIS_TO_RANDOM_STRING
+      - HOST=0.0.0.0
+      - PORT=3333
+      - CACHE_VIEWS=false
+    networks:
+      - ferdium-network
+
+networks:
+  ferdium-network:
+    driver: bridge
+

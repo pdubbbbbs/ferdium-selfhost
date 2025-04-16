@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Data directories
+/data
+/config
+/database
+
+# Node modules (if any)
+node_modules
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
